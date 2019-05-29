@@ -2,7 +2,6 @@ package xx.love.datastructure
 
 /**
  * @author : zhijun.li on 2019/1/15
- *   email : zhijun.li@timanetworks.com
  *
  */
 //两数之和
