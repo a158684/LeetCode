@@ -77,17 +77,17 @@ public class MergeKLists {
 //       }
         ListNode pre = new ListNode(-1);
         ListNode cummry = pre;
-        while (l1 != null && l2 != null) {
-            if (l1.val <= l2.val) {
-                cummry.next = l1;
-                l1 = l1.next;
-            } else {
-                cummry.next = l2;
-                l2 = l2.next;
+            while (l1 != null && l2 != null) {
+                if (l1.val <= l2.val) {
+                    cummry.next = l1;
+                    l1 = l1.next;
+                } else {
+                    cummry.next = l2;
+                    l2 = l2.next;
+                }
+                cummry = cummry.next;
+                cummry.next = l1 == null ? l1 : l2;
             }
-            cummry = cummry.next;
-            cummry.next = l1 == null ? l1 : l2;
-        }
         return pre.next;
     }
 
